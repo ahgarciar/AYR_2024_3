@@ -1,6 +1,7 @@
 ## https://en.wikipedia.org/wiki/Kernel_(image_processing)
 
 from keras.utils import load_img, img_to_array, array_to_img, save_img #alternative 2
+#from keras.api.utils import load_img, img_to_array #alternative 3
 
 largo, alto = 250, 250
 #file = './FIT V.jpg'
