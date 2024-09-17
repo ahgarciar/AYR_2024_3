@@ -51,7 +51,7 @@ entrenamiento_datagen = ImageDataGenerator(
     horizontal_flip=True #inversion horizontal
 )
 
-prueba_datagen = ImageDataGenerator(
+validacion_datagen = ImageDataGenerator(
     rescale=1./255
 )
 
@@ -63,7 +63,7 @@ imagen_entrenamiento = entrenamiento_datagen.flow_from_directory(
     color_mode="grayscale"
 )
 
-imagen_prueba = prueba_datagen.flow_from_directory(
+imagen_validacion = validacion_datagen.flow_from_directory(
     data_validacion,
     target_size=(alto, largo),
     batch_size=batch_size,
@@ -105,11 +105,16 @@ cnn.compile(loss='categorical_crossentropy', optimizer=optimizers.Adam(learning_
 #loss -> funcion de perdida
 
 #entrena el modelo de la red neuronal
-cnn.fit(imagen_entrenamiento, steps_per_epoch=pasos, epochs=epocas, validation_data= imagen_prueba, validation_steps=pasos_validacion)
+cnn.fit(imagen_entrenamiento, steps_per_epoch=pasos, epochs=epocas, validation_data= imagen_validacion, validation_steps=pasos_validacion)
 
 dir = "/modelo/"
 if not os.path.exists(dir):
     os.mkdir(dir)
-cnn.save(dir + 'modelo.h5') #estructura
-cnn.save_weights(dir + 'pesos.h5') #pesos en las capas
+#version antigua
+#cnn.save(dir + 'modelo.h5') #estructura
+#cnn.save_weights(dir + 'pesos.h5') #pesos en las capas
+
+#version moderna
+cnn.save(dir + 'modelo.keras') #estructura
+cnn.save_weights(dir + 'pesos.keras') #pesos en las capas
 
