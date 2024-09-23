@@ -9,9 +9,10 @@ import speech_recognition as sr
 r = sr.Recognizer()
 
 print("Inicia:")
-#mic = sr.Microphone()
-with sr.Microphone(device_index=1) as source:
-#with sr.Microphone() as source:
+#mic = sr.Microphone() ##toma el "microfono" por defecto
+#with sr.Microphone(device_index=1) as source:
+#    audio = r.listen(source)
+with sr.Microphone() as source:
     #r.adjust_for_ambient_noise(source) # listen for 1 second
     # to calibrate the energy threshold for ambient noise levels
     audio = r.listen(source)

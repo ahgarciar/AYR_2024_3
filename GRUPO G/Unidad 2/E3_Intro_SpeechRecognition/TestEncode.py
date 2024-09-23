@@ -14,3 +14,4 @@ cad = eval(cad)
 print(cad)
 cad = cad.encode("latin-1")
 print(cad.decode("utf8"))
+

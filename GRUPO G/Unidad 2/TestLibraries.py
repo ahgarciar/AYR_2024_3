@@ -24,3 +24,5 @@ s = pd.Series([1,3,5, n.nan,6, 8])  #instancias de datos...
 print(s)
 
 
+# SPEECH RECOGNITION OFFLINE CON -> VOSK
+

@@ -10,14 +10,15 @@ try:
     with audio_file as source:
         audio = r.record(source)
 
-    var = r.recognize_google(audio,language="es-MX",show_all=False)
+    var = r.recognize_google(audio,language="es-MX", show_all=False)
     print("Mensaje: " ) #personalized
     print(var)
 
     palabras = str(var).split()
     print(palabras)
 
-    if palabras[0] =="Hola":
+    #if palabras[0] =="debería":
+    if "debería" in palabras:
         print("Saludos:D!")
 
 

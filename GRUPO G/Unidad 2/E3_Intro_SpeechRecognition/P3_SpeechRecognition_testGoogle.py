@@ -5,7 +5,7 @@
 import speech_recognition as sr
 r = sr.Recognizer()
 #audio_file = sr.AudioFile('Audios/audio1.wav')
-audio_file = sr.AudioFile('Audios/audio_file_34.wav')
+audio_file = sr.AudioFile('../E3_Intro_SpeechRecognition/Audios/audio_file.wav')
 try:
     with audio_file as source:
         audio = r.record(source)
