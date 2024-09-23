@@ -10,8 +10,8 @@ from keras import backend as K
 
 K.clear_session()
 
-data_entrenamiento = "../ConvolutionalNeuronalNetwork/F1-Entrenamiento"
-data_validacion = "../ConvolutionalNeuronalNetwork/F2-Validacion"
+data_entrenamiento = "../E2_ConvolutionalNeuronalNetwork/F1-Entrenamiento"
+data_validacion = "../E2_ConvolutionalNeuronalNetwork/F2-Validacion"
 
 #Parametros
 epocas = 50
