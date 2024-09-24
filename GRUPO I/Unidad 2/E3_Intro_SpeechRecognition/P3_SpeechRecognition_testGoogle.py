@@ -10,7 +10,7 @@ try:
     with audio_file as source:
         audio = r.record(source)
 
-    var = r.recognize_google(audio,language="es-MX",show_all=True)
+    var = r.recognize_google(audio,language="es-MX", show_all=True)
     print("Mensaje: " ) #personalized
     print(var)
 

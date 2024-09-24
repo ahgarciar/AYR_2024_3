@@ -18,8 +18,8 @@ try:
     print(palabras)
 
     #if palabras[0] =="debería":
-    if "debería" in palabras:
-        print("Saludos:D!")
+    if "guardar" in palabras:
+        print("Archivo guardado :D!")
 
 
 except sr.UnknownValueError as e:

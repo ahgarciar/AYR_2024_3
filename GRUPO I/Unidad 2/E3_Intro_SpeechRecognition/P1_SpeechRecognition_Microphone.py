@@ -21,7 +21,7 @@ print("Registro Generado!")
 
 try:
     #print("Mensaje: " + r.recognize_google(audio)) #normal
-    cadena =  r.recognize_google(audio, language="es-MX")  #str
+    cadena = r.recognize_google(audio, language="es-MX")  #str
     print("Mensaje: " + cadena) #personalized
 except sr.UnknownValueError:
     print("Unknown Value Error")
