@@ -20,9 +20,11 @@ print("Listening...")
 
 while True:
     data = stream.read(4000)
+
     if recognizer.AcceptWaveform(data):
         result = recognizer.Result()
         print(result)
     else:
-        partial_result = recognizer.PartialResult()
-        print(partial_result)
+        pass
+        # partial_result = recognizer.PartialResult()
+        # print(partial_result)
